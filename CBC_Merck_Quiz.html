@@ -59,9 +59,9 @@
       li { margin-bottom: clamp(6px,  1vw,   14px); }
       label { font-size: clamp(14px, 1.6vw, 22px); }
 
-      h1 { font-size: clamp(28px, 4.8vw, 60px); margin-bottom: clamp(14px, 2vw, 32px); }
-      h2 { font-size: clamp(24px, 3.8vw, 52px); margin-bottom: clamp(12px, 1.8vw, 28px); }
-      h3 { font-size: clamp(20px, 3.2vw, 42px); margin-bottom: clamp(10px, 1.5vw, 24px); }
+      h1 { font-size: clamp(28px, max(4.8vw, 5.2vh), 60px); margin-bottom: clamp(14px, max(2vw, 2.5vh), 36px); }
+      h2 { font-size: clamp(24px, max(3.8vw, 4.2vh), 52px); margin-bottom: clamp(12px, max(1.8vw, 2vh),  28px); }
+      h3 { font-size: clamp(20px, max(3.2vw, 3.5vh), 42px); margin-bottom: clamp(10px, max(1.5vw, 1.8vh), 24px); }
 
       /* ── App shell ──────────────────────────────── */
       #app-container {
@@ -231,14 +231,14 @@
 
       /* ── Question & options ─────────────────────── */
       .question {
-        font-size: clamp(20px, 3.2vw, 46px);
-        margin-bottom: clamp(20px, 3.5vw, 48px);
+        font-size: clamp(20px, max(3.2vw, 3.8vh), 46px);
+        margin-bottom: clamp(20px, max(3.5vw, 4vh), 52px);
       }
 
       .option-group {
         display: flex;
         flex-direction: column;
-        gap: clamp(10px, 2vw, 32px);
+        gap: clamp(12px, max(2vw, 2.5vh), 36px);
       }
 
       .option {
@@ -246,19 +246,19 @@
         align-items: center;
         border: 2px solid #00857c;
         border-radius: 14px;
-        padding: clamp(12px, 2.2vw, 32px);
-        font-size: clamp(18px, 2.6vw, 36px);
+        padding: clamp(16px, max(2.5vw, 3vh), 36px);
+        font-size: clamp(18px, max(2.6vw, 3vh), 36px);
         background: white;
         transition: background-color 0.3s, border-color 0.3s;
         cursor: pointer;
       }
 
       .option .circle {
-        min-width:  clamp(18px, 2.2vw, 32px);
-        min-height: clamp(18px, 2.2vw, 32px);
+        min-width:  clamp(22px, max(2.5vw, 3vh), 36px);
+        min-height: clamp(22px, max(2.5vw, 3vh), 36px);
         border: 3px solid #00857c;
         border-radius: 50%;
-        margin-right: clamp(10px, 1.5vw, 24px);
+        margin-right: clamp(12px, max(1.5vw, 2vh), 28px);
         background: white;
         flex-shrink: 0;
       }
