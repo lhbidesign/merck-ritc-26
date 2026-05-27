@@ -157,24 +157,34 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-wrap: nowrap;
         gap: 10px;
         margin-bottom: clamp(16px, 3vw, 48px);
       }
 
       /* ── Buttons ────────────────────────────────── */
       .exit-btn {
-        background: #00857c;
-        color: white;
+        background: transparent;
+        color: #00857c;
         border: none;
-        padding: clamp(10px, 1.3vw, 20px) clamp(14px, 2vw, 36px);
-        border-radius: 16px;
-        font-size: clamp(13px, 1.4vw, 22px);
+        padding: 8px;
+        border-radius: 8px;
+        font-size: clamp(24px, 3vw, 40px);
+        line-height: 1;
         cursor: pointer;
-        margin-top: 8px;
-        min-width: clamp(70px, 9vw, 130px);
+        margin-top: 0;
+        min-width: unset;
         white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s, opacity 0.2s;
+        opacity: 0.85;
+      }
+      .exit-btn:hover {
+        opacity: 1;
+        color: #005f58;
       }
 
       .last-exit-button {
@@ -442,10 +452,9 @@
       /* ── Mobile ─────────────────────────────────── */
       @media (max-width: 600px) {
         .btn-container {
-          flex-direction: column-reverse;
-          align-items: stretch;
+          flex-direction: row;
+          align-items: center;
         }
-        .exit-btn { width: 100%; text-align: center; }
         .outro-container { align-items: center; text-align: center; }
       }
 </style>
@@ -486,8 +495,8 @@
             </div>
           </div>
           <div class="btn-container">
+            <button class="exit-btn" aria-label="Exit quiz">&#x2715;</button>
             <button class="next-btn" id="nextBtn"></button>
-            <button class="exit-btn">EXIT</button>
           </div>
           </div>
           <div id="progress-container">
